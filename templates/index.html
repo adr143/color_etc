@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+    <title>Frame Navigation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <div class="button rounded-button" onclick="showFrame('frame1')">Home</div>
+            <div class="button rounded-button active" onclick="showFrame('frame2')">Detection Page</div>
+            <button id="speakButton" class="rounded-button">Speak</button>
+        </div>    
+
+        <!-- Home Page -->
+        <div id="frame1" class="frame active">
+            <h1>DEEP LEARNING-GENERATED TACTILE AND AUDITORY EDUCATIONAL SYSTEM FOR KINDERGARTEN LEARNERS</h1>
+        </div>
+
+        <!-- Detection Page -->
+        <div id="frame2" class="frame">
+            <div id="video">
+                <h1>Let's see what this is!</h1>
+                <img src='{{ url_for("video_feed") }}' alt="">
+                
+            </div>
+        </div>
+        
+
+    <script src='{{ url_for("static", filename="scripts.js") }}'></script>
+</body>
+</html>

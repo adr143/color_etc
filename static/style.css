@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #ABD0FA; /* Updated background color */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #ABD0FA; /* Updated background color for frames */
+}
+
+#frame1 {
+    background-image: url("new.png"); /* <------------ */
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Ensure the image fits without zooming in */
+    background-position: center;
+    background-color: #ABD0FA; /* Updated background color */
+}
+
+#video {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -2rem;
+}
+
+img {
+    min-width: 650px;
+    min-height: 537.99px;
+    border: 2px solid black;
+    border-radius: 5%;
+    display: block;
+}
+
+#frame2 {
+    background-image: url("new.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.button-container {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+}
+.nav{
+    justify-content: start;
+}
+
+.rounded-button {
+    border-radius: 50px; /* Fully rounded corners */
+    background-color: white;
+    color: #000000;
+    font-family: 'ITIM', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0;
+    line-height: 60px; /* Match the height for centering text */
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    width: 17rem;
+    height: 4rem;
+    margin: 3rem;
+    transition: background-color .3s ease-in-out;
+    display: none;
+}
+
+.rounded-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Adjusted styles for the h1 */
+#frame1 h1 {
+    position: absolute;
+    right: 13%; /* Move text to the right side */
+    top: 35%; /* Adjust vertical position */
+    transform: translateY(-50%); /* Center vertically */
+    background-color: transparent; /* Remove background */
+    color: black; /* Black text color */
+    padding: 10px;
+    font-size: 4.5vw; /* Adjust font size for responsiveness */
+    text-align: center;
+
+    max-width: 70%; /* Limit width */
+
+    /* Apply text shadow to create an outline effect */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8), -2px -2px 5px rgba(255, 255, 255, 0.8),
+                 2px -2px 5px rgba(255, 255, 255, 0.8), -2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+#frame2 h1 {
+    text-align: top;
+    font-size: 3.5vw; /* Adjust font size based on viewport width */
+    margin-bottom: .25rem;
+    margin-top: 3rem;
+}
+
+#frame2 .rounded-button {
+    margin-top: 2rem; /* Adjust positioning if needed */
+    background-color: #ff8c00; /* Customize the color if desired */
+}
+
+#frame2 .rounded-button:hover {
+    background-color: #cc7000; /* Customize hover effect */
+}
+
+/* Move the Speak button to the top-left corner and maintain button design */
+#speakButton {
+    position: absolute;          /* Remove the button from normal document flow */
+    top: 50%;                   /* Distance from the top of the viewport */
+    left: 20px;                  /* Distance from the left of the viewport */
+    background-color: white;     /* Match other button's background color */
+    color: #000000;              /* Match text color */
+    font-family: 'ITIM', sans-serif; /* Use same font as other buttons */
+    font-size: 1.5vw;            /* Same font size */
+    font-weight: bold;           /* Match font weight */
+    padding: 0;                  /* Match padding */
+    line-height: 60px;           /* Center the text vertically */
+    text-align: center;          /* Center the text horizontally */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Same box-shadow for hover effect */
+    cursor: pointer;            /* Pointer cursor on hover */
+    width: 17rem;                /* Same width as other buttons */
+    height: 4rem;                /* Same height as other buttons */
+    margin: 3rem;                /* Similar margin for spacing */
+    transition: background-color .3s ease-in-out; /* Smooth hover effect */
+    z-index: 1000;               /* Ensure the button is on top */
+}
+
+/* Optional hover effect */
+#speakButton:hover {
+    background-color: black;     /* Darken the button background color */
+    color: white;                /* Change text color to white on hover */
+}
+
+
+
+.active {
+    display: block;
+}
