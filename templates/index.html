@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+     <!-- <link rel="stylesheet" href="../static/style.css"> -->
     <title>Frame Navigation</title>
 </head>
 <body>
     <div class="container">
         <div class="button-container">
-            <div class="button rounded-button" onclick="showFrame('frame1')">Home</div>
             <div class="button rounded-button active" onclick="showFrame('frame2')">Detection Page</div>
-            <button id="speakButton" class="rounded-button">Speak</button>
+            <div class="frame2-button-container">
+                <div class="button rounded-button" onclick="showFrame('frame1')">Home</div>
+                <button id="speakButton" class="rounded-button">Speak</button>
+            </div>
         </div>    
 
         <!-- Home Page -->
@@ -27,8 +30,7 @@
                 
             </div>
         </div>
-        
-
     <script src='{{ url_for("static", filename="scripts.js") }}'></script>
+    <!-- <script src='../static/scripts.js'></script> -->
 </body>
 </html>
